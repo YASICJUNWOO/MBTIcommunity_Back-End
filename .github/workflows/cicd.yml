@@ -13,8 +13,6 @@ env:
   CODE_DEPLOY_APPLICATION_NAME: cicd-test-CD
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: cicd-test-CD-group
 
-permissions:
-  contents: read
 
 jobs:
   deploy:
