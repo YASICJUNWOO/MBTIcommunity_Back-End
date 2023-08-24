@@ -1,5 +1,6 @@
 package KJW.MBTIcoummunity.Controller;
 
+import KJW.MBTIcoummunity.Entity.ENTITY;
 import KJW.MBTIcoummunity.Login.LoginRequest;
 import KJW.MBTIcoummunity.Login.LoginResponse;
 import KJW.MBTIcoummunity.SignUp.signupRequest;
@@ -10,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController

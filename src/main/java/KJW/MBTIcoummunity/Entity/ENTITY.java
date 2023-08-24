@@ -1,4 +1,4 @@
-package KJW.MBTIcoummunity;
+package KJW.MBTIcoummunity.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
