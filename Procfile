@@ -1,0 +1,1 @@
+web: java -jar MBTIcoummunity-application-prod-ebextensions-1.jar

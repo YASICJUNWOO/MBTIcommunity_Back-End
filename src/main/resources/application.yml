@@ -2,13 +2,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mbti-rds.ctzpvwowlwov.ap-northeast-2.rds.amazonaws.com:3306/MBTI?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: mason
-    password: masonmbti
+    url: jdbc:mysql://${AWS_DB_HOST}/${AWS_DB_DATABASE_NAME}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${AWS_DB_USERNAME}
+    password: ${AWS_DB_PASSWORD}
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
@@ -26,9 +26,9 @@ spring:
 cloud:
   aws:
     s3:
-      bucket: mbti-pic-bucket
+      bucket: ${AWS_S3_BUCKET_NAME}
     stack.auto: false
     region.static: ap-northeast-2
     credentials:
-      accessKey: AKIARU7MLVIAZFVW5QBC
-      secretKey: 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
+      accessKey: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_ACCESS_KEY}
