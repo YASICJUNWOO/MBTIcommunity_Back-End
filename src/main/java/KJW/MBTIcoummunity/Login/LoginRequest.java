@@ -1,4 +1,4 @@
-package KJW.MBTIcoummunity;
+package KJW.MBTIcoummunity.Login;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

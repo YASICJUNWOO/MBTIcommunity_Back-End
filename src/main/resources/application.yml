@@ -16,3 +16,19 @@ spring:
 
   logging.level:
     org.hibernate.SQL: debug
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+cloud:
+  aws:
+    s3:
+      bucket: mbti-pic-bucket
+    stack.auto: false
+    region.static: ap-northeast-2
+    credentials:
+      accessKey: AKIARU7MLVIAZFVW5QBC
+      secretKey: 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

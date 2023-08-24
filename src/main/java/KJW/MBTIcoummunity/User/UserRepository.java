@@ -1,4 +1,4 @@
-package KJW.MBTIcoummunity;
+package KJW.MBTIcoummunity.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

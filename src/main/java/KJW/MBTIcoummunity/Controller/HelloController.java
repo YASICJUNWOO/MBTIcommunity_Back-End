@@ -1,12 +1,15 @@
 package KJW.MBTIcoummunity.Controller;
 
-import KJW.MBTIcoummunity.*;
+import KJW.MBTIcoummunity.Login.LoginRequest;
+import KJW.MBTIcoummunity.Login.LoginResponse;
+import KJW.MBTIcoummunity.SignUp.signupRequest;
+import KJW.MBTIcoummunity.SignUp.signupResponse;
+import KJW.MBTIcoummunity.User.User;
+import KJW.MBTIcoummunity.User.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @RestController
@@ -18,19 +21,6 @@ public class HelloController {
     @Autowired
     UserRepository userRepository;
 
-    @Autowired
-    Repository repository;
-
-    @GetMapping("")
-    public List<ENTITY> hello() {
-        return repository.findAll();
-    }
-
-    @PostMapping("")
-    public ENTITY post(@RequestBody ENTITY entity) {
-        ENTITY saved = repository.save(entity);
-        return saved;
-    }
 
     @PostMapping("/login")
     public LoginResponse login(@RequestBody LoginRequest dto) {

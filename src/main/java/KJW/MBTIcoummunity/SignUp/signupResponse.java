@@ -1,4 +1,4 @@
-package KJW.MBTIcoummunity;
+package KJW.MBTIcoummunity.SignUp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginResponse {
+public class signupResponse {
+
     String success;
-    String mbtiType;
 }

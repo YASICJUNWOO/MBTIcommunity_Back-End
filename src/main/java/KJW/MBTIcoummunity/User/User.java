@@ -1,5 +1,6 @@
-package KJW.MBTIcoummunity;
+package KJW.MBTIcoummunity.User;
 
+import KJW.MBTIcoummunity.SignUp.signupRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,9 +29,9 @@ public class User {
 
     public static User toEntity(signupRequest dto){
         return User.builder()
-                .mbtiType(dto.mbtiType)
-                .password(dto.password)
-                .username(dto.username)
+                .mbtiType(dto.getMbtiType())
+                .password(dto.getPassword())
+                .username(dto.getUsername())
                 .build();
     }
 }
