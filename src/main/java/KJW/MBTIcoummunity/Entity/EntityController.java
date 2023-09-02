@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//http://mbti.ap-northeast-2.elasticbeanstalk.com/
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/entity")
@@ -23,4 +26,5 @@ public class EntityController {
         ENTITY saved = repository.save(entity);
         return saved;
     }
+
 }
