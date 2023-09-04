@@ -19,7 +19,7 @@ public class Post {
     Long id;
 
     @ManyToOne
-    @Column(name = "username")
+    @JoinColumn(name = "user")
     User user;
 
     @Column(name = "mbti_type")
