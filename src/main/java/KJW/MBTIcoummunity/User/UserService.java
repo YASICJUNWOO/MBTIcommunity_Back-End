@@ -16,8 +16,17 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+    private final PasswordEncoder  passwordEncoder;
+
     public UserDetails findUser(String email) {
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new IllegalArgumentException("해당 유저가 없습니다."));
+    }
+
+    public User createUser(UserCreateDto user) {
+        String encodepwd = passwordEncoder.encode(user.getPassword());
+        User savedUser = User.toEntity(user, encodepwd);
+
+        return userRepository.save(savedUser);
     }
 }

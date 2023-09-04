@@ -2,6 +2,8 @@ package KJW.MBTIcoummunity.User;
 
 import KJW.MBTIcoummunity.User.Dto.UserCreateDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,15 +20,13 @@ public class UserController {
 
     private final UserService userService;
 
-    private final AuthService authService;
-
     @PostMapping("/signup")
     public User postUser(@RequestBody UserCreateDto user) {
-        return authService.createUser(user);
+        return userService.createUser(user);
     }
 
     @GetMapping("/user")
-    public User getUser(@AuthenticationPrincipal User user) {
-        return user;
+    public ResponseEntity<?> getUser(@AuthenticationPrincipal User user) {
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }
