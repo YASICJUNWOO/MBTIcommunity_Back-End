@@ -3,6 +3,8 @@ package KJW.MBTIcoummunity.Post;
 import KJW.MBTIcoummunity.Post.Dto.PostCreateDto;
 import KJW.MBTIcoummunity.Post.Setvice.PostService;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,14 +15,16 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @AllArgsConstructor
-@RequestMapping("/post")
+@RequestMapping("/api/post")
 public class PostController {
 
+    private final Logger logger = LoggerFactory.getLogger(PostController.class);
 
     private final PostService service;
 
-    @GetMapping("")
+    @GetMapping()
     public List<Post> getEntity() {
+        logger.warn("getEntity");
         return service.getEntity();
     }
 

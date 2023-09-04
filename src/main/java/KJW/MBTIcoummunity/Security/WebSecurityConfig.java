@@ -27,7 +27,8 @@ public class WebSecurityConfig {
         http.csrf().disable().cors().disable()
                 .authorizeRequests(request -> request
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/signup")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/signup"),
+                                new AntPathRequestMatcher("/api/*")).permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(login -> login
