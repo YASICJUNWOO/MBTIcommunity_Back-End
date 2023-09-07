@@ -1,5 +1,6 @@
 package KJW.MBTIcoummunity.Security;
 
+import KJW.MBTIcoummunity.User.User;
 import KJW.MBTIcoummunity.User.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
