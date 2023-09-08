@@ -41,7 +41,8 @@ public class WebSecurityConfig {
                         requestMatchers(
                                 new AntPathRequestMatcher("/signup"),
                                 new AntPathRequestMatcher("/api/**"),
-                                new AntPathRequestMatcher("/login/**")).permitAll().
+                                new AntPathRequestMatcher("/login/**"),
+                                new AntPathRequestMatcher("/user")).permitAll().
                         anyRequest().authenticated()).
                 formLogin(login -> login.
                         loginProcessingUrl("/login").
