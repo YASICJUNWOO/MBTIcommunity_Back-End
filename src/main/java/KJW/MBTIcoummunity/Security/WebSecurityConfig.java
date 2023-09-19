@@ -39,7 +39,7 @@ public class WebSecurityConfig {
         http.authorizeRequests(request -> request.
                         dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll().
                         requestMatchers(
-                                new AntPathRequestMatcher("/signup"),
+                                new AntPathRequestMatcher("/**"),
                                 new AntPathRequestMatcher("/api/**"),
                                 new AntPathRequestMatcher("/login/**"),
                                 new AntPathRequestMatcher("/user")).permitAll().
