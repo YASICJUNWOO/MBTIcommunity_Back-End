@@ -26,6 +26,7 @@ public class LoginController {
 
     @GetMapping("/success")
     public ResponseEntity<?> success() {
+        logger.info("로그인 성공");
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
