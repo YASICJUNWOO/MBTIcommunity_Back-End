@@ -1,6 +1,6 @@
 package KJW.MBTIcoummunity.User;
 
-import KJW.MBTIcoummunity.User.Dto.UserCreateDto;
+import KJW.MBTIcoummunity.Auth.Dto.UserCreateDto;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,11 +15,10 @@ public class UserService {
     private final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     private final UserRepository userRepository;
-
     private final PasswordEncoder passwordEncoder;
 
     @Transactional
-    public UserDetails findUser(String email) {
+    public User findUser(String email) {
         return userRepository.findByEmail(email).orElseThrow(() -> new IllegalArgumentException("해당 유저가 없습니다."));
     }
 

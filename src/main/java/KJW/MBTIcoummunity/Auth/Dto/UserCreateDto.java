@@ -1,4 +1,4 @@
-package KJW.MBTIcoummunity.User.Dto;
+package KJW.MBTIcoummunity.Auth.Dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

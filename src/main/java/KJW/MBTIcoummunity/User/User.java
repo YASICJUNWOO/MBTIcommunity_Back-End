@@ -1,7 +1,6 @@
 package KJW.MBTIcoummunity.User;
 
-import KJW.MBTIcoummunity.SignUp.signupRequest;
-import KJW.MBTIcoummunity.User.Dto.UserCreateDto;
+import KJW.MBTIcoummunity.Auth.Dto.UserCreateDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

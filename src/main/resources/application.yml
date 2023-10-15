@@ -38,3 +38,6 @@ server:
   servlet:
     session:
       tracking-modes : cookie
+
+jwt:
+  secret: VlwEyVBsYt9V4zq57TejMnVByzblYcfPQye08f7MGVA9XkHa

@@ -7,4 +7,6 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByEmail(String email); // 이메일로 이미 가입된 유저인지 확인
+
+    Optional<User> findByUsername(String username); // 유저네임으로 이미 가입된 유저인지 확인
 }
